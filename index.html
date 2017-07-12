@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku</title>
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div ng-app="sudoku" ng-controller="sudokuCtrl">
+        <table id="tableau">
+            <tr ng-repeat="lignes in grille" class="b_{{$index % 3 == 0}}">
+                <td ng-repeat="valeur in lignes" class="b_{{$index % 3 == 0}}">
+                    <input type="text" ng-change="change($parent.$index, $index, valeur)"" ng-model="valeur">
+                </td>
+            </tr>
+        </table>
+        <button ng-click="check()">Resultat</button>
+        <span id="resultat"></span>
+    </div>
+
+    <script src="libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="libs/angularjs/1.0.8/angular-resource.js"></script>
+
+    <!-- scripts du client applicatif  -->
+    <script src="js/app.js"></script>
+</body>
+</html>
