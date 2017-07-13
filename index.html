@@ -15,11 +15,10 @@
             </tr>
         </table>
         <button ng-click="check()">Resultat</button>
-        <span id="resultat"></span>
+        <span id="resultat" ng-show="resultat">{{resultat}}</span>
     </div>
 
     <script src="libs/angularjs/1.0.8/angular.min.js"></script>
-    <script src="libs/angularjs/1.0.8/angular-resource.js"></script>
 
     <!-- scripts du client applicatif  -->
     <script src="js/app.js"></script>

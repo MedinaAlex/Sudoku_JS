@@ -49,10 +49,10 @@ myApp.controller('sudokuCtrl', ['$scope', function ($scope) {
         }
 
         if(retour){
-            document.getElementById("resultat").innerHTML = "Gagné"
+            $scope.resultat = "Gagné"
         }
         else {
-            document.getElementById("resultat").innerHTML = "Perdu"
+            $scope.resultat  = "Perdu"
         }
     }
 }])
